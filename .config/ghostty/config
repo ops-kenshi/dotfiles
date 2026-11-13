@@ -65,3 +65,6 @@ selection-foreground = #c6d0f5
 
 keybind = ctrl+period=text:\x1b[46;5u
 
+# Free up Ctrl+Tab for tmux (was next_tab/previous_tab)
+keybind = ctrl+tab=esc:[27;5;9~
+keybind = ctrl+shift+tab=esc:[27;6;9~
