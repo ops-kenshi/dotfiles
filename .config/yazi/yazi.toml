@@ -1,0 +1,29 @@
+[opener]
+edit = [
+	{ run = 'nvim %s', desc = "nvim", block = true, for = "unix" },
+]
+zen = [
+	{ run = 'open -b app.zen-browser.zen %s', desc = "Zen", for = "macos" },
+]
+
+[open]
+prepend_rules = [
+	{ url = "*.htm{,l}", use = [ "edit", "open", "reveal" ] },
+	{ url = "*.pdf", use = [ "zen", "open", "reveal" ] },
+	{ mime = "text/*", use = "edit" },
+	{ mime = "application/json", use = "edit" },
+	{ mime = "application/*xml", use = "edit" },
+	{ mime = "application/toml", use = "edit" },
+	{ mime = "application/x-yaml", use = "edit" },
+	{ mime = "inode/x-empty", use = "edit" },
+]
+
+[plugin]
+prepend_previewers = [
+    { url = "*.csv", run = "rich-preview"}, # for csv files
+    { url = "*.md", run = "rich-preview" }, # for markdown (.md) files
+    { url = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
+    { url = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
+    { url = "*.json", run = "rich-preview"}, # for json (.json) files
+#    { url = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
+]
