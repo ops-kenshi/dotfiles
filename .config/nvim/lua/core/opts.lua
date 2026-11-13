@@ -15,7 +15,7 @@ vim.opt.softtabstop = 4
 -- Highlight on Yank
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
-    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 200 })
+    vim.hl.on_yank({ higroup = 'IncSearch', timeout = 200 })
   end,
 })
 
@@ -31,3 +31,9 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
   command = "if mode() != 'c' | checktime | endif",
 })
 
+
+-- Folding from treesitter (works per-language inside .vue's template/script/style
+-- too); everything starts unfolded. Filetypes without a parser get no folds.
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevelstart = 99
