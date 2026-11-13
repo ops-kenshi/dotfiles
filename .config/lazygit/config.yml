@@ -1,0 +1,101 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  colorScheme: auto
+  # File-type icons in the files/commit-files trees (needs a Nerd Font; Ghostty uses JetBrainsMono Nerd Font)
+  nerdFontsVersion: "3"
+  showFileIcons: true
+  theme:
+    activeBorderColor:
+      - '#4d9375'
+      - bold
+    inactiveBorderColor:
+      - '#777777'
+    searchingActiveBorderColor:
+      - '#5eaab5'
+      - bold
+    optionsTextColor:
+      - '#6394bf'
+    selectedLineFgColor:
+      - bold
+    selectedLineBgColor:
+      - reverse
+    inactiveViewSelectedLineBgColor:
+      - '#2f3a45'
+    cherryPickedCommitFgColor:
+      - '#6394bf'
+    cherryPickedCommitBgColor:
+      - '#5eaab5'
+    markedBaseCommitFgColor:
+      - '#6394bf'
+    markedBaseCommitBgColor:
+      - '#e6cc77'
+    unstagedChangesColor:
+      - '#cb7676'
+    defaultFgColor:
+      - '#dbd7ca'
+  darkTheme:
+    activeBorderColor:
+      - '#4d9375'
+      - bold
+    inactiveBorderColor:
+      - '#777777'
+    searchingActiveBorderColor:
+      - '#5eaab5'
+      - bold
+    optionsTextColor:
+      - '#6394bf'
+    selectedLineFgColor:
+      - bold
+    selectedLineBgColor:
+      - reverse
+    inactiveViewSelectedLineBgColor:
+      - '#2f3a45'
+    cherryPickedCommitFgColor:
+      - '#6394bf'
+    cherryPickedCommitBgColor:
+      - '#5eaab5'
+    markedBaseCommitFgColor:
+      - '#6394bf'
+    markedBaseCommitBgColor:
+      - '#e6cc77'
+    unstagedChangesColor:
+      - '#cb7676'
+    defaultFgColor:
+      - '#dbd7ca'
+  lightTheme:
+    activeBorderColor:
+      - '#1e754f'
+      - bold
+    inactiveBorderColor:
+      - '#999999'
+    searchingActiveBorderColor:
+      - '#2993a3'
+      - bold
+    optionsTextColor:
+      - '#296aa3'
+    selectedLineFgColor:
+      - bold
+    selectedLineBgColor:
+      - reverse
+    inactiveViewSelectedLineBgColor:
+      - '#e2e8ef'
+    cherryPickedCommitFgColor:
+      - '#296aa3'
+    cherryPickedCommitBgColor:
+      - '#2993a3'
+    markedBaseCommitFgColor:
+      - '#296aa3'
+    markedBaseCommitBgColor:
+      - '#bda437'
+    unstagedChangesColor:
+      - '#ab5959'
+    defaultFgColor:
+      - '#393a34'
+
+git:
+  # Syntax-highlighted diffs in the main (code/changes) view via delta
+  diffRenderers:
+    - name: delta
+      type: stdinFilter
+      command: delta --dark --paging=never --hunk-header-style=omit --file-style=raw --file-decoration-style=none
