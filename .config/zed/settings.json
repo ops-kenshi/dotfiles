@@ -1,0 +1,71 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Zed (Default)",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "terminal": {
+    "font_family": "Input Mono",
+    "cursor_shape": "bar",
+    "blinking": "on"
+  },
+  "base_keymap": "VSCode",
+  "tabs": {
+    "close_position": "left"
+  },
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "relative_line_numbers": "enabled",
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "gutter": {
+    "line_numbers": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "hover_popover_sticky": true,
+  "use_system_window_tabs": true,
+  "max_tabs": 5,
+  "use_system_path_prompts": false,
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.6
+  },
+  "buffer_font_family": "Input Mono",
+  "file_types": {
+    "tailwindcss": [
+      "*.css"
+    ],
+    "vue": [
+      "*.page-template",
+      "*.layout-template",
+      "*.vue"
+    ]
+  },
+  "show_whitespaces": "selection",
+  "show_edit_predictions": true,
+  "line_ending": "prefer_lf",
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
+  "soft_wrap": "editor_width",
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Vitesse Refined Black",
+  },
+}
